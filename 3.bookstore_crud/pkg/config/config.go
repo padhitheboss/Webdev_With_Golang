@@ -9,7 +9,7 @@ import(
 var db *gorm.DB
 
 func Connect(){
-	d,err := gorm.Open("mysql","root:root@tcp(127.0.0.1:3306)/gobookstore?charset=utf8&parseTime=True&loc=Local")
+	d,err := gorm.Open("mysql","root:s3cr3t@tcp(127.0.0.1:3306)/gobookstore?charset=utf8&parseTime=True&loc=Local")
 	if err != nil{
 		log.Fatal(err)
 	}

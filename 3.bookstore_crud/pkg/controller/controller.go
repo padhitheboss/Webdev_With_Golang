@@ -5,7 +5,6 @@ import (
 	"log"
 	"net/http"
 	"strconv"
-
 	"example.com/bookstore/pkg/models"
 	"example.com/bookstore/pkg/utils"
 	"github.com/gorilla/mux"
@@ -31,8 +30,8 @@ func GetBooks(w http.ResponseWriter, r *http.Request) {
 
 func GetBookById(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	bookId := vars["BookId"]
-	ID, err := strconv.ParseInt(bookId, 0, 0)
+	BookId := vars["bookId"]
+	ID, err := strconv.ParseInt(BookId, 0, 0)
 	if err != nil {
 		log.Println(err)
 	}
